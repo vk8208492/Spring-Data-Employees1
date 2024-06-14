@@ -9,7 +9,7 @@ CREATE DATABASE employees_db;
 -- Можемо створити таблиці БД через візуальний інструмент, наприклад,
 -- MySQL Workbench.
 
-CREATE TABLE IF NOT EXISTS Employees
+CREATE TABLE IF NOT EXISTS employees
 ( id INTEGER NOT NULL AUTO_INCREMENT,
   first_name VARCHAR(255) NOT NULL,
   last_name VARCHAR(255) NOT NULL,
