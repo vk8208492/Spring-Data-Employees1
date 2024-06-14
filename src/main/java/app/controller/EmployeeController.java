@@ -33,9 +33,9 @@ public class EmployeeController {
     @GetMapping("/employees")
     public ResponseData getAll() {
         Optional<List<Employee>> optional = service.getAll();
-        return optional.map(users ->
+        return optional.map(employees ->
                         new ResponseData(HttpStatus.OK.toString(),
-                                true, users))
+                                true, employees))
                 .orElseGet(() ->
                         new ResponseData(HttpStatus.NOT_FOUND.toString(),
                                 false,
