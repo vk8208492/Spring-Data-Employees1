@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body style="background-color: #E9ECEB;">
+<div th:fragment="contact_update" class="container m-2">
+    <div class="container-sm">
+        <div class="row" style="background-color: #FCFCFC;">
+            <!-- Update form start -->
+            <div class="col-md-6 offset-md-3">
+                <h4 class="text-center mb-3 mt-3 text-warning">Update Contact</h4>
+                <form th:object="${contact}" th:action="@{/change-book}" method="post">
+                    <div>
+                        <label for="first_name"><span style="font-size:12px;">First_name</span></label>
+                        <input type="text" class="form-control fw-light" id="first_name" name="first_name"
+                               placeholder="Contact first_name...">
+                    </div>
+                    <div>
+                        <label for="last_name"><span style="font-size:12px;">Last_name</span></label>
+                        <input type="text" class="form-control fw-light" id="last_name" name="last_name"
+                               placeholder="Contact last_name...">
+                    </div>
+                    <div>
+                        <label for="phone"><span style="font-size:12px;">Phone</span></label>
+                        <input type="text" class="form-control fw-light" id="phone" name="phone"
+                               placeholder="Phone...">
+                    </div>
+                    <div class="container text-center mb-4"><br>
+                        <a th:href="@{/contacts}" class="btn btn-outline-primary btn-sm">Back</a>
+                        &nbsp;&nbsp;
+                        <button type="submit" class="btn btn-primary btn-sm">Update</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Update form end -->
+        </div>
+    </div>
+</div>
+</body>
+</html>
